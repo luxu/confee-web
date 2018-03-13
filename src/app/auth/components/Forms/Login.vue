@@ -1,29 +1,28 @@
 <script>
 
+import { mapActions } from 'vuex'
 import { isEmpty } from 'lodash'
 
 export default {
-
 	data () {
 		return {
 			user: {
 				email: '',
 				password: ''
-
 			}
 		}
 	},
-
 	methods: {
+		...mapActions(['attemptLogin']),
 		doLogin () {
 			const user = this.user
-			// this.$router.push('/')
-			this.$store.dispatch('attemptLogin', { ...user})
+			this.attemptLogin({...user})
+				.then(() => {
+					this.$router.push('/')
+			})
 		}
 	},
-
 	computed: {
-
 		isValid () {
 			const user = this.user
 			return !isEmpty(user.email) && !isEmpty(user.password)
@@ -32,7 +31,6 @@ export default {
 }
 	
 </script>
-
 
 <template>
 <div class="rom">

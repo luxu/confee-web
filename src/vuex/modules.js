@@ -1,4 +1,4 @@
-// import { vuex as app } from '../app'
-import vuex from '../app'
+import { vuex as app } from '../app'
+// import vuex from 'src/app';
 
-export default { ...vuex }
+export default { ...app }

@@ -1,8 +1,5 @@
-// import { routes as app } from 'src/app'
-import app from 'src/app';
-// import app from 'src/app'
-
-app.vuex;
+// import app from '../app'
+import { routes as app } from '../app'
 
 const root = [
     { path: '/', redirect: '/dashboard' }

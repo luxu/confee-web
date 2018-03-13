@@ -1,7 +1,6 @@
 <template>
       <header class="page-header row">
-        <h2>Olá! {{ $route.params.name }}</h2>
-        <!-- <pre></pre> -->
+        <h2>PharmaDelivery</h2>
       </header>
 </template>
 
@@ -10,7 +9,7 @@
 // import http from '../../../http'
 
 export default {
-  mounted() {
+  mounted () {
   	// http.get('http://pokeapi.co/api/v2/pokemon/1/')
   	// .then(response => response.data)
   	// .then(data => {
